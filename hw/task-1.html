@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const arr = ['Как тебя зовут?', 'Сколько тебе лет?', 'Твой любимый цвет?', 'Твой любимый фильм',];
+    const answer = [];
+    const user = () => {
+        for (let string of arr) {
+            let userAnswer = prompt(string);
+            answer.push(userAnswer);
+            console.log(answer);
+        }
+        return alert(`
+            Тебя зовут ${answer[0]} \n
+            Тебе ${answer[1]} лет \n
+            Твой люмимый цвет ${answer[2]} \n
+            Твой любимый фильм ${answer[3]}
+          `)
+    }
+    user()
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const arr = [
+        "Иван",
+        "Игнат",
+        "Александр",
+        "Ира",
+        "Света",
+        "Настя",
+    ]
+    const sizeOfName = (arr) => {
+        let min = arr[0]
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (max.length < arr[i].length) {
+                max = arr[i]
+            }
+            if (min.length > arr[i].length) {
+                min = arr[i]
+            }
+        }
+        alert(`короткое имя: ${min} длинное имя: ${max}`)
+    }
+
+    sizeOfName(arr)
+
+</script>
+</body>
+</html>
