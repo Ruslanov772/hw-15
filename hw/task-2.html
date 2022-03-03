@@ -6,19 +6,24 @@
 </head>
 <body>
 <script>
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,];
+    const num = [];
+    console.log(num);
     const del = () => {
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17,];
-
-        for (let i = 2; i < arr.length; i += 3) {
-            arr.splice(i, 1);
-            i--;
+        for (let i = 0; i < arr.length; i += 3) {
+            num.push(i);
         }
-        console.log(arr);
+        for (let i = 0; i < num.length; i++) {
+            let myIndex = arr.indexOf(num[i]);
+            if (myIndex !== -1) {
+                arr.splice(myIndex, 1);
+            }
+        }
+        return arr
 
     }
     del()
-
-
+    console.log(arr);
 </script>
 </body>
 </html>
